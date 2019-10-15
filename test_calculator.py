@@ -23,4 +23,3 @@ class TestCalculator:
     def test_division_by_zero(self):
         with pytest.raises(ZeroDivisionError):
             calculator.divide(100, 0)
-
