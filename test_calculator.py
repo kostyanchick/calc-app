@@ -3,6 +3,7 @@ Unit tests for teh calculator library
 """
 
 import calculator
+import pytest
 
 
 class TestCalculator:
@@ -15,3 +16,10 @@ class TestCalculator:
 
     def test_multiplication(self):
         assert 100 == calculator.multiply(10, 10)
+
+    def test_division(self):
+        assert 10 == calculator.divide(100, 10)
+
+    def test_division_by_zero(self):
+        with pytest.raises(ZeroDivisionError):
+            calculator.divide(100, 0)
